@@ -1,0 +1,62 @@
+
+@media (min-width: 376px) {
+  .country-cards {
+    padding: 0 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+  }
+}
+.country-filters {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 376px) {
+  .country-filters {
+    margin: 2rem 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.country-filters app-dropdown {
+  width: 60%;
+}
+@media (min-width: 376px) {
+  .country-filters app-dropdown {
+    width: 25%;
+  }
+}
+.search-filter {
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 376px) {
+  .search-filter {
+    width: 33%;
+  }
+}
+.search-filter span {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+.search-filter input {
+  color: white;
+  font-size: 1rem;
+  border: none;
+  background-color: inherit;
+}
+:host-context(.light) .search-filter {
+  background-color: var(--l-element);
+  color: var(--l-input);
+}
+:host-context(.light) .search-filter input::placeholder {
+  color: var(--l-input);
+}
+:host-context(.dark) .search-filter {
+  background-color: var(--d-element);
+  color: var(--d-text);
+}
+:host-context(.dark) .search-filter input::placeholder {
+  color: var(--d-text);
+}

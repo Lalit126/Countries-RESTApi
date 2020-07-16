@@ -25,6 +25,7 @@
             ],
             "styles": [
               "src/styles.css"
+          
             ],
             "scripts": []
           },
@@ -88,7 +89,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/scss/font-awesome.css"
+
             ],
             "scripts": []
           }
@@ -119,6 +122,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "countryapi"
+    }
+  },
+  "defaultProject": "countryapi",
+  "cli": {
+    "analytics": "977d2fbc-f6f8-4510-99e3-8ae9fb5f7b22"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

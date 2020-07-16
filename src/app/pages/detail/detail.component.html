@@ -1,0 +1,39 @@
+<header>
+    Hello 
+</header><div *ngIf = "country$ | async; let country">
+    <button>
+
+        <span class = "fa fa-arrow-left"></span>
+        Back
+    </button>
+
+    <img [src] ="country.flag"/>
+    <h3>{{ country.name }}</h3>
+
+    <p> 
+        <strong> Native Name:</strong>
+        {{ country.name }}
+    </p>
+    <p> 
+        <strong> Population:</strong>
+        {{ country.population | number: '1.0'}}
+    </p>
+    <p> 
+        <strong> Region:</strong>
+        {{ country.region }}
+    </p>
+    <p> 
+        <strong> Top Level Domain:</strong>
+        {{ country.topLevelDomain }}
+    </p>
+    <p> 
+        <strong> Currencies:</strong>
+        {{ country.currencies }}
+    </p>
+    <p> 
+        <strong> Languages:</strong>
+        {{ country.language }}
+    </p>
+
+
+</div>
