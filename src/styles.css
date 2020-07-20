@@ -11,6 +11,7 @@
   --l-element: var(--white);
   --l-text: hsl(200, 15%, 8%);
   --l-input: hsl(0, 0%, 52%);
+  
 }
 
 * {
@@ -20,6 +21,7 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  
 }
 
 h1,

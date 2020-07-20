@@ -18,5 +18,6 @@ export class AppComponent implements OnInit{
   
   ngOnInit(){
     this.theme = this.themeService.mode$;
-  }
+    
+   }
 }

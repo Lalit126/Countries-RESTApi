@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 import { Country } from '../types/api';
-import { map} from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  private api = "https://restcountries.eu/rest/v2";
+  private api = 'https://restcountries.eu/rest/v2';
 
+  constructor(private http: HttpClient) {}
 
-
-  constructor(private http : HttpClient) { }
-
-  getAllCountries(){
-    const api = "https://restcountries.eu/rest/v2";
-    return this.http.get<Country[]>(api)
-   // return this.http.get<Country[]>('${this.api}/all');
+  getAllCountries() {
+    return this.http.get<Country[]>(`${this.api}/all`);
   }
 
-  getCountryByName(name: string){
-  const api = "https://restcountries.eu/rest/v2";
-   //return this.http.get<Country[]>(api)
- 
-return this.http
-.get<Country[]>('${this.api}/name/${name}')
-.pipe(map(([res]) => res)
-);
-  
+  getCountryByName(name: string) {
+    return this.http
+      .get<Country[]>(`${this.api}/name/${name}`)
+      .pipe(map(([res]) => res));
   }
 
+  getCountriesByCodes(codes: string[]) {
+    console.log(`${this.api}/alhpa?codes=${codes.join(';')}`);
+    return this.http.get<Country[]>(
+      `${this.api}/alpha?codes=${codes.join(';')}`
+    );
+  }
 }

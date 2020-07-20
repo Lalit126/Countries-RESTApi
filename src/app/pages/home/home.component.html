@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class= "country-filters">
 
 <div class="search-filter shadow">
@@ -8,7 +9,7 @@ placeholder = "   Search "
 [(ngModel)] = "searchFilter"/>
 </div>
 
-<app-dropdown
+<app-dropdown class=" filterc shadow"
 placeholder = "Filter by Region" 
 [options]="regionOptions"
 [(value)]= "regionFilter"
@@ -18,7 +19,6 @@ placeholder = "Filter by Region"
 </div>
 
 <div>
-
     <div class = "country-cards">
 
     <app-country-card
